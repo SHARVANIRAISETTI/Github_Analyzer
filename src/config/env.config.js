@@ -10,7 +10,7 @@ const envSchema = z.object({
   DB_USER: z.string(),
   DB_PASSWORD: z.string(),
   DB_NAME: z.string(),
-GITHUB_TOKEN: z.string().default('none')
+  GITHUB_PAT: z.string().optional(),
 });
 
 const _env = envSchema.safeParse(process.env);
